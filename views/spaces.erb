@@ -1,0 +1,36 @@
+<html>
+<link rel="stylesheet" href="spaces.css">
+<h1>Book a Space</h1>
+
+<nav class="navMenu">
+      <a href="/ ">Register</a>
+      <a href="/spaces">Spaces</a>
+      <a href="/sessions/new">Sign Out</a>
+      <a href="/requests">My Requests</a>
+      <div class="dot"></div>
+</nav>
+<br>
+<div class="submit">
+  <a href="/spaces/new"><input type="submit" value="List a space"></a>
+</div>
+<br>
+<div class="box">
+  <h1>Spaces</h1>
+  <% @spaces.reverse.each do |space| %>
+    <li>Name:<a href="/spaces/<%= space.id %>"> <%= space.name %></a></li>
+    <li>Description:</li>
+    <%= space.description %>  
+    <li>Available from:</li>
+    <%= space.available_start %>  
+    <li>Available to:</li>
+    <%= space.available_end %>  
+    <li>Price per Night:</li>
+    <%= space.price %> 
+    <a href="/spaces/<%= space.id %>"> <br>Click here </a>
+    <% end %>
+</div>
+</html>
+
+
+
+

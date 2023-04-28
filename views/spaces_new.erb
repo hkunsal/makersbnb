@@ -1,0 +1,31 @@
+<nav class="navMenu">
+      <a href="/ ">Register</a>
+      <a href="/spaces">Spaces</a>
+      <a href="/sessions/new">Sign Out</a>
+      <a href="/requests">My Requests</a>
+      <div class="dot"></div>
+</nav>
+
+<h1>List a Space</h1>
+
+<form method="post" action="/spaces">
+<p>Do you want to list your space? Simply fill out the form below!</p>
+
+Name: <input type="text" name="name">
+<br>
+
+Description: <input type="text" name="description">
+<br>
+
+Available from: <input type="date" name="available_start">
+<br>
+Available to: <input type="date" name="available_end">
+<br>
+
+Price per Night: <input type="number" name="price">
+<br>
+
+<input type="submit" value="Submit">
+
+
+
